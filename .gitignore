@@ -1,0 +1,17 @@
+# Next.js
+.next/
+out/
+
+# Node
+node_modules/
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+
+# Claude Code local settings
+.claude/settings.local.json
