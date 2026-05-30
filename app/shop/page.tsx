@@ -74,6 +74,20 @@ const books = [
     reviews: 24,
     featured: false,
   },
+  {
+    id: 4,
+    title: "Protein Paradox",
+    subtitle: "More is not always good",
+    description:
+      "Explores the history of protein, individual protein requirements depending on your goals, and how to fix protein overload. Evidence-based guidance for optimal protein intake at every life stage.",
+    price: "$18.99",
+    pages: "160 pages",
+    format: "eBook + Soft Cover",
+    tags: ["Protein", "Nutrition", "Health"],
+    rating: 4.8,
+    reviews: 24,
+    featured: false,
+  },
 ];
 
 const supplements = [
