@@ -3,67 +3,97 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Clock, Tag } from "lucide-react";
 
-const categories = ["All", "Microbiome", "IBS", "IBD", "SIBO", "Longevity", "Nutrition Science", "Clinical"];
+const categories = ["All", "Aging Clocks", "Aging Biology", "Lifestyle", "Supplements", "Therapies", "Nutrition", "Microbiome"];
 
 const posts = [
   {
-    slug: "gut-microbiome-ibs",
-    title: "How Dietary Fibre Reshapes the Gut Microbiome in IBS",
+    slug: "epigenetic-clocks-explained",
+    title: "Epigenetic Clocks Explained: What Your DNA Methylation Reveals About Your Age",
     excerpt:
-      "New meta-analyses show specific soluble fibres can reduce symptom severity by up to 40%. We examine the evidence, the mechanisms, and practical fibre strategies for IBS patients.",
-    category: "IBS",
-    readTime: "8 min",
-    date: "May 15, 2026",
+      "Horvath, GrimAge, DunedinPACE — these clocks predict disease and mortality better than your birth certificate. We explain how methylation patterns encode your biological age and which clock you should actually care about.",
+    category: "Aging Clocks",
+    readTime: "10 min",
+    date: "May 20, 2026",
     featured: true,
   },
   {
-    slug: "sibo-low-fodmap",
-    title: "SIBO & Low-FODMAP: What the Latest Trials Tell Us",
+    slug: "zone2-longevity",
+    title: "Zone 2 Cardio and Longevity: The Science Behind the Hype",
     excerpt:
-      "The low-FODMAP diet remains the gold standard for SIBO symptom control, but emerging research challenges its long-term microbiome impact.",
-    category: "SIBO",
-    readTime: "6 min",
-    date: "April 28, 2026",
+      "VO₂max is the single strongest predictor of all-cause mortality. We explain the physiology of zone 2 training, how to find your zone, and why 150 minutes per week may be the most powerful thing you can do for healthspan.",
+    category: "Lifestyle",
+    readTime: "8 min",
+    date: "May 8, 2026",
     featured: false,
   },
   {
-    slug: "longevity-nutrition",
-    title: "Longevity Nutrition: Lessons from the Blue Zones Revisited",
+    slug: "senolytics-2025",
+    title: "Senolytics in 2025: What the Human Trials Now Tell Us",
     excerpt:
-      "A 2025 re-analysis of Blue Zone dietary data reveals the microbiome-longevity connection is stronger than previously understood.",
-    category: "Longevity",
-    readTime: "10 min",
-    date: "March 20, 2026",
-    featured: false,
-  },
-  {
-    slug: "crohns-exclusive-enteral",
-    title: "Exclusive Enteral Nutrition in Crohn's: A Practical Guide",
-    excerpt:
-      "EEN achieves remission in up to 80% of paediatric Crohn's cases. New data extends these findings to adults — here's what clinicians need to know.",
-    category: "IBD",
+      "Dasatinib + quercetin cleared senescent cells in the first human trials at Mayo Clinic. The results are more nuanced than the headlines suggest — here's what actually happened and what it means.",
+    category: "Therapies",
     readTime: "9 min",
-    date: "March 5, 2026",
+    date: "April 25, 2026",
     featured: false,
   },
   {
-    slug: "short-chain-fatty-acids",
-    title: "Short-Chain Fatty Acids: The Microbiome's Most Powerful Output",
+    slug: "hallmarks-aging-practical",
+    title: "The 12 Hallmarks of Aging: A Practical Breakdown",
     excerpt:
-      "Butyrate, propionate, and acetate regulate immunity, inflammation, and even brain health. We explore how dietary choices shape SCFA production.",
-    category: "Microbiome",
+      "López-Otín's hallmarks framework is the foundation of modern longevity medicine. But what does it actually mean for how you live? We translate the molecular biology into actionable priorities.",
+    category: "Aging Biology",
+    readTime: "12 min",
+    date: "April 12, 2026",
+    featured: false,
+  },
+  {
+    slug: "nmn-evidence-review",
+    title: "NMN in 2025: Reviewing Every Human Trial",
+    excerpt:
+      "NMN is one of the most hyped supplements on the market. We review every published human RCT — including the disappointing ones — and give you an honest evidence grade.",
+    category: "Supplements",
+    readTime: "11 min",
+    date: "March 30, 2026",
+    featured: false,
+  },
+  {
+    slug: "rapamycin-longevity",
+    title: "Rapamycin for Longevity: What the Dog Aging Project Tells Us",
+    excerpt:
+      "Rapamycin extends lifespan in every model organism tested. The Dog Aging Project is providing the first large-scale mammalian longevity trial data. Here's what's been found so far.",
+    category: "Therapies",
+    readTime: "8 min",
+    date: "March 15, 2026",
+    featured: false,
+  },
+  {
+    slug: "sleep-dementia",
+    title: "Sleep and Dementia Risk: The Glymphatic System Explained",
+    excerpt:
+      "During deep sleep, the brain's glymphatic system clears amyloid-beta and tau proteins. Chronic sleep deprivation may be the single most modifiable risk factor for Alzheimer's disease.",
+    category: "Lifestyle",
     readTime: "7 min",
-    date: "February 14, 2026",
+    date: "March 1, 2026",
     featured: false,
   },
   {
-    slug: "polyphenols-microbiome",
-    title: "Polyphenols and the Microbiome: Beyond Antioxidants",
+    slug: "longevity-nutrition-microbiome",
+    title: "Longevity Nutrition: Why Your Gut Microbiome Is the Missing Link",
     excerpt:
-      "Polyphenols are fermented by gut bacteria into metabolites that may do more for GI health than the polyphenols themselves.",
-    category: "Nutrition Science",
-    readTime: "5 min",
-    date: "January 30, 2026",
+      "A 2025 re-analysis of Blue Zone dietary data reveals the microbiome-longevity connection is stronger than previously understood. The microbiome may mediate most of the longevity benefit of plant-rich diets.",
+    category: "Nutrition",
+    readTime: "10 min",
+    date: "February 20, 2026",
+    featured: false,
+  },
+  {
+    slug: "glycan-age-test",
+    title: "GlycanAge: The Aging Test That Responds to Lifestyle Faster Than Any Other",
+    excerpt:
+      "While epigenetic clocks change slowly over years, GlycanAge — which measures immune system glycosylation — can change by 5–10 years within months of lifestyle intervention. Here's the science.",
+    category: "Aging Clocks",
+    readTime: "7 min",
+    date: "February 5, 2026",
     featured: false,
   },
 ];
@@ -78,13 +108,13 @@ export default function BlogPage() {
         {/* Page header */}
         <div className="mb-10">
           <p className="text-[#2D6A4F] text-sm font-semibold uppercase tracking-wider mb-1">Research Blog</p>
-          <h1 className="font-serif text-4xl font-bold text-[#1B2A4A]">Evidence-Based Nutrition Insights</h1>
+          <h1 className="font-serif text-4xl font-bold text-[#1B2A4A]">Longevity Science Explained</h1>
           <p className="mt-3 text-gray-500 text-lg max-w-2xl">
-            Deep dives into microbiome science, GI disease nutrition, and longevity research — every claim backed by a citation.
+            Deep dives into biological aging, clinical trials, supplements, and lifestyle interventions — every claim backed by a citation.
           </p>
         </div>
 
-        {/* Category filter (visual only — full filtering would need state) */}
+        {/* Category filter */}
         <div className="flex flex-wrap gap-2 mb-10">
           {categories.map((c, i) => (
             <button

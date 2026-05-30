@@ -13,11 +13,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "FNSM Research | Nutrition for Microbiome Health & Longevity",
+  title: "FNSM Research | Evidence-Based Longevity Science",
   description:
-    "Evidence-based nutrition guidance for microbiome optimization, GI disease management, and longevity. Science-backed resources for patients and clinicians.",
+    "Evidence-based longevity science: biological aging, aging clocks, healthspan optimisation, lab tests, lifestyle interventions, supplements, and emerging therapies. Written for clinicians and longevity-focused individuals.",
   keywords:
-    "microbiome nutrition, GI disease, IBS, IBD, SIBO, Crohn's, longevity, gut health",
+    "longevity, healthspan, lifespan, biological aging, aging clocks, epigenetic clock, glycan age, hallmarks of aging, NMN, senolytics, rapamycin, longevity supplements, lab tests aging",
 };
 
 export default function RootLayout({

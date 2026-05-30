@@ -4,15 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Microscope } from "lucide-react";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Blog", href: "/blog" },
-  { label: "Shop", href: "/shop" },
-  { label: "Tools", href: "/tools" },
-  { label: "Newsletter", href: "/newsletter" },
-  { label: "About", href: "/about" },
-];
-
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -32,8 +23,14 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center gap-5">
+            {[
+              { label: "Blog", href: "/blog" },
+              { label: "Shop", href: "/shop" },
+              { label: "Tools", href: "/tools" },
+              { label: "Newsletter", href: "/newsletter" },
+              { label: "About", href: "/about" },
+            ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -62,12 +59,18 @@ export default function Header() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="md:hidden border-t border-white/10 py-4 space-y-3">
-            {navLinks.map((link) => (
+          <div className="md:hidden border-t border-white/10 py-4 space-y-1">
+            {[
+              { label: "Blog", href: "/blog" },
+              { label: "Shop", href: "/shop" },
+              { label: "Tools", href: "/tools" },
+              { label: "Newsletter", href: "/newsletter" },
+              { label: "About", href: "/about" },
+            ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-2 py-1 text-sm text-white/80 hover:text-[#C9A84C] transition-colors"
+                className="block px-2 py-1.5 text-sm text-white/80 hover:text-[#C9A84C] transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
