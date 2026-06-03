@@ -3,96 +3,96 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Clock, Tag } from "lucide-react";
 
-const categories = ["All", "Aging Clocks", "Aging Biology", "Lifestyle", "Supplements", "Therapies", "Nutrition", "Microbiome"];
+const categories = ["All", "FODMAP", "Microbiome", "IBS", "IBD / Crohn's", "SIBO", "Fermented Foods", "Nutrition Science"];
 
 const posts = [
   {
-    slug: "epigenetic-clocks-explained",
-    title: "Epigenetic Clocks Explained: What Your DNA Methylation Reveals About Your Age",
+    slug: "fodmap-reintroduction-guide",
+    title: "The FODMAP Reintroduction Protocol: A Step-by-Step Clinical Guide",
     excerpt:
-      "Horvath, GrimAge, DunedinPACE — these clocks predict disease and mortality better than your birth certificate. We explain how methylation patterns encode your biological age and which clock you should actually care about.",
-    category: "Aging Clocks",
-    readTime: "10 min",
+      "The elimination phase is only half the story. We walk through all 8 reintroduction challenges — the exact test food, protocol, timing, and how to interpret your personal results to build a long-term sustainable diet.",
+    category: "FODMAP",
+    readTime: "11 min",
     date: "May 20, 2026",
     featured: true,
   },
   {
-    slug: "zone2-longevity",
-    title: "Zone 2 Cardio and Longevity: The Science Behind the Hype",
+    slug: "microbiome-diversity-30-plants",
+    title: "30 Plants a Week: The Evidence Behind the Microbiome Diversity Target",
     excerpt:
-      "VO₂max is the single strongest predictor of all-cause mortality. We explain the physiology of zone 2 training, how to find your zone, and why 150 minutes per week may be the most powerful thing you can do for healthspan.",
-    category: "Lifestyle",
-    readTime: "8 min",
+      "The American Gut Project found that eating 30+ plant varieties per week predicted microbiome diversity better than any other single dietary variable. Here is exactly how to hit that target practically.",
+    category: "Microbiome",
+    readTime: "9 min",
     date: "May 8, 2026",
     featured: false,
   },
   {
-    slug: "senolytics-2025",
-    title: "Senolytics in 2025: What the Human Trials Now Tell Us",
+    slug: "ibd-nutrition-flare",
+    title: "Eating During an IBD Flare: What the Evidence Actually Supports",
     excerpt:
-      "Dasatinib + quercetin cleared senescent cells in the first human trials at Mayo Clinic. The results are more nuanced than the headlines suggest — here's what actually happened and what it means.",
-    category: "Therapies",
-    readTime: "9 min",
+      "Low-residue, elemental, or exclusive enteral nutrition? We review the clinical data on nutritional management during active Crohn's disease and ulcerative colitis — and what the guidelines actually say.",
+    category: "IBD / Crohn's",
+    readTime: "10 min",
     date: "April 25, 2026",
     featured: false,
   },
   {
-    slug: "hallmarks-aging-practical",
-    title: "The 12 Hallmarks of Aging: A Practical Breakdown",
+    slug: "sibo-breath-test-interpretation",
+    title: "SIBO Breath Test Results Explained: H₂, CH₄, and What the Numbers Mean",
     excerpt:
-      "López-Otín's hallmarks framework is the foundation of modern longevity medicine. But what does it actually mean for how you live? We translate the molecular biology into actionable priorities.",
-    category: "Aging Biology",
-    readTime: "12 min",
+      "Hydrogen SIBO, methane-dominant IMO, or hydrogen sulfide? We explain the positive criteria, the false-positive traps, and how to interpret a lactulose or glucose breath test result alongside your symptoms.",
+    category: "SIBO",
+    readTime: "9 min",
     date: "April 12, 2026",
     featured: false,
   },
   {
-    slug: "nmn-evidence-review",
-    title: "NMN in 2025: Reviewing Every Human Trial",
+    slug: "fermented-foods-microbiome",
+    title: "Fermented Foods vs. Fibre: Which Builds a Better Microbiome?",
     excerpt:
-      "NMN is one of the most hyped supplements on the market. We review every published human RCT — including the disappointing ones — and give you an honest evidence grade.",
-    category: "Supplements",
-    readTime: "11 min",
+      "A 2021 Stanford RCT directly compared high-fibre and high-fermented-food diets head-to-head. The results surprised most researchers — and changed clinical recommendations. Here is what they found.",
+    category: "Fermented Foods",
+    readTime: "8 min",
     date: "March 30, 2026",
     featured: false,
   },
   {
-    slug: "rapamycin-longevity",
-    title: "Rapamycin for Longevity: What the Dog Aging Project Tells Us",
+    slug: "calprotectin-ibs-vs-ibd",
+    title: "Fecal Calprotectin: The One Test That Separates IBS from IBD",
     excerpt:
-      "Rapamycin extends lifespan in every model organism tested. The Dog Aging Project is providing the first large-scale mammalian longevity trial data. Here's what's been found so far.",
-    category: "Therapies",
-    readTime: "8 min",
+      "A single stool biomarker can save patients years of diagnostic limbo. We explain what calprotectin measures, what the thresholds mean, and why it should be the first test ordered when GI inflammation is suspected.",
+    category: "IBD / Crohn's",
+    readTime: "7 min",
     date: "March 15, 2026",
     featured: false,
   },
   {
-    slug: "sleep-dementia",
-    title: "Sleep and Dementia Risk: The Glymphatic System Explained",
+    slug: "prebiotic-fibre-guide",
+    title: "Prebiotic Fibre: The Complete Guide to Feeding Your Microbiome",
     excerpt:
-      "During deep sleep, the brain's glymphatic system clears amyloid-beta and tau proteins. Chronic sleep deprivation may be the single most modifiable risk factor for Alzheimer's disease.",
-    category: "Lifestyle",
-    readTime: "7 min",
+      "Inulin, FOS, pectin, beta-glucan, resistant starch — each feeds different bacterial communities. We explain the science of prebiotic fibre, which foods contain the most, and how to increase intake without triggering IBS symptoms.",
+    category: "Nutrition Science",
+    readTime: "10 min",
     date: "March 1, 2026",
     featured: false,
   },
   {
-    slug: "longevity-nutrition-microbiome",
-    title: "Longevity Nutrition: Why Your Gut Microbiome Is the Missing Link",
+    slug: "ibs-gut-brain-axis",
+    title: "IBS and the Gut–Brain Axis: Why Stress Triggers Your Gut",
     excerpt:
-      "A 2025 re-analysis of Blue Zone dietary data reveals the microbiome-longevity connection is stronger than previously understood. The microbiome may mediate most of the longevity benefit of plant-rich diets.",
-    category: "Nutrition",
-    readTime: "10 min",
+      "IBS is not 'all in the head' — but the brain genuinely changes gut physiology via the enteric nervous system, vagus nerve, and microbiota signalling. Understanding this explains why stress, sleep, and anxiety management are part of IBS treatment.",
+    category: "IBS",
+    readTime: "9 min",
     date: "February 20, 2026",
     featured: false,
   },
   {
-    slug: "glycan-age-test",
-    title: "GlycanAge: The Aging Test That Responds to Lifestyle Faster Than Any Other",
+    slug: "probiotic-evidence-grades",
+    title: "Probiotics for IBS and IBD: An Evidence-Graded Review of Every Major Strain",
     excerpt:
-      "While epigenetic clocks change slowly over years, GlycanAge — which measures immune system glycosylation — can change by 5–10 years within months of lifestyle intervention. Here's the science.",
-    category: "Aging Clocks",
-    readTime: "7 min",
+      "Lactobacillus, Bifidobacterium, Saccharomyces boulardii — the evidence quality varies enormously by strain and condition. We review the published RCTs and give each strain an honest evidence grade.",
+    category: "Microbiome",
+    readTime: "12 min",
     date: "February 5, 2026",
     featured: false,
   },
@@ -108,9 +108,10 @@ export default function BlogPage() {
         {/* Page header */}
         <div className="mb-10">
           <p className="text-[#2D6A4F] text-sm font-semibold uppercase tracking-wider mb-1">Research Blog</p>
-          <h1 className="font-serif text-4xl font-bold text-[#1B2A4A]">Longevity Science Explained</h1>
+          <h1 className="font-serif text-4xl font-bold text-[#1B2A4A]">Gut Health Science Explained</h1>
           <p className="mt-3 text-gray-500 text-lg max-w-2xl">
-            Deep dives into biological aging, clinical trials, supplements, and lifestyle interventions — every claim backed by a citation.
+            Deep dives into microbiome nutrition, FODMAP protocols, IBS, IBD, and SIBO management —
+            every claim backed by a citation.
           </p>
         </div>
 

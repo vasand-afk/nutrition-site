@@ -6,185 +6,151 @@ import { BookOpen, Download, Star, ShieldCheck, Pill, Package, ArrowRight, Flask
 const books = [
   {
     id: 1,
-    title: "The Longevity Blueprint",
-    subtitle: "A Science-Based Guide to Extending Healthspan — Not Just Lifespan",
+    title: "The Microbiome Blueprint",
+    subtitle: "A Clinical Guide to Nutrition for IBS, IBD & SIBO",
     description:
-      "240 pages covering biological aging, the hallmarks framework, aging clocks, evidence-based lifestyle strategies, and an honest assessment of current and emerging therapies. Written for both patients and clinicians.",
-    price: "$34",
-    pages: "240 pages",
+      "200+ pages covering the science of gut microbiome modulation through diet. Includes evidence-graded dietary protocols for IBS, IBD, SIBO, and general gut optimisation — with a full guide to the three-phase FODMAP protocol and how to personalise it.",
+    price: "$29",
+    pages: "214 pages",
     format: "PDF + ePub",
-    tags: ["Longevity", "Healthspan", "Aging Biology"],
+    tags: ["Microbiome", "Gut Health", "IBS / IBD"],
     rating: 4.9,
-    reviews: 113,
+    reviews: 142,
     featured: true,
   },
   {
     id: 2,
-    title: "Eat for Longevity",
-    subtitle: "Evidence-Based Nutrition Strategies for a Longer, Healthier Life",
+    title: "Protein Paradox",
+    subtitle: "More Is Not Always Good",
     description:
-      "A comprehensive look at longevity nutrition — from caloric restriction and time-restricted eating to polyphenol-rich diets and optimal protein intake for muscle preservation. Actionable meal strategies included.",
-    price: "$24",
-    pages: "168 pages",
-    format: "PDF + ePub",
-    tags: ["Longevity Diet", "Nutrition", "Anti-Aging"],
+      "Explores the history of protein, individual protein requirements depending on your goals, and how to fix protein overload. Evidence-based guidance for optimal protein intake at every life stage — including the gut health implications of high-protein diets.",
+    price: "$18.99",
+    pages: "160 pages",
+    format: "eBook + Soft Cover",
+    tags: ["Protein", "Nutrition", "Gut Health"],
     rating: 4.8,
-    reviews: 87,
+    reviews: 24,
     featured: false,
   },
   {
     id: 3,
-    title: "The Microbiome Blueprint",
-    subtitle: "A Clinical Guide to Nutrition for IBS, IBD & SIBO",
+    title: "Eat for Your Gut",
+    subtitle: "Evidence-Based Nutrition Strategies for a Healthier Microbiome",
     description:
-      "200+ pages covering the science of gut microbiome modulation through diet. Includes evidence-graded protocols for IBS, IBD, SIBO, and general gut optimisation — the gut-longevity connection explored in detail.",
-    price: "$29",
-    pages: "214 pages",
+      "A comprehensive look at nutrition for gut health — from fibre diversity and fermented foods to anti-inflammatory eating and time-restricted feeding. Includes 30+ practical meal strategies backed by microbiome research.",
+    price: "$24",
+    pages: "168 pages",
     format: "PDF + ePub",
-    tags: ["Microbiome", "Gut Health", "IBS/IBD"],
-    rating: 4.9,
-    reviews: 142,
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Understanding Your Aging Biomarkers",
-    subtitle: "A Practical Guide to Lab Tests, Aging Clocks & What to Do About the Results",
-    description:
-      "The lab tests that actually matter for longevity — from ApoB and hsCRP to epigenetic clocks and DEXA scans. Explains what optimal levels look like, not just normal ranges, and what to do when results are off.",
-    price: "$19",
-    pages: "128 pages",
-    format: "PDF",
-    tags: ["Biomarkers", "Lab Tests", "Aging Clocks"],
-    rating: 4.7,
-    reviews: 61,
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Protein Paradox",
-    subtitle: "More is not always good",
-    description:
-      "Explores the history of protein, individual protein requirements depending on your goals, and how to fix protein overload. Evidence-based guidance for optimal protein intake at every life stage.",
-    price: "$18.99",
-    pages: "160 pages",
-    format: "eBook + Soft Cover",
-    tags: ["Protein", "Nutrition", "Health"],
+    tags: ["Microbiome Diet", "Nutrition", "Gut Health"],
     rating: 4.8,
-    reviews: 24,
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Protein Paradox",
-    subtitle: "More is not always good",
-    description:
-      "Explores the history of protein, individual protein requirements depending on your goals, and how to fix protein overload. Evidence-based guidance for optimal protein intake at every life stage.",
-    price: "$18.99",
-    pages: "160 pages",
-    format: "eBook + Soft Cover",
-    tags: ["Protein", "Nutrition", "Health"],
-    rating: 4.8,
-    reviews: 24,
+    reviews: 87,
     featured: false,
   },
 ];
 
 const supplements = [
   {
-    id: "omega3",
-    name: "Ultra-Pure Omega-3 (EPA + DHA)",
-    subtitle: "Triglyceride-form fish oil — the most bioavailable",
-    description: "Third-party tested for heavy metals and oxidation. Each capsule provides 1g EPA + 0.5g DHA in re-esterified triglyceride form — the most bioavailable format. Target: raise your omega-3 index above 8%.",
-    price: "$35",
-    servings: "90 capsules · 90 day supply",
+    id: "probiotics",
+    name: "Multi-Strain Probiotic (50 Billion CFU)",
+    subtitle: "Clinically dosed — IBS and post-antibiotic use",
+    description:
+      "10 well-researched strains including Lactobacillus rhamnosus GG, L. acidophilus, and Bifidobacterium longum. Delayed-release capsule delivers live organisms past stomach acid. Evidence-supported for IBS symptom reduction and antibiotic-associated diarrhoea.",
+    price: "$38",
+    servings: "60 capsules · 60 day supply",
     evidenceGrade: "A",
-    evidenceText: "Grade A: Strong RCT evidence (REDUCE-IT trial, VITAL trial)",
-    tags: ["Cardiovascular", "Anti-inflammatory", "Brain"],
+    evidenceText: "Grade A: Multiple RCTs for IBS and AAD (Lactobacillus rhamnosus GG)",
+    tags: ["IBS", "Gut Flora", "Post-Antibiotic"],
     featured: true,
   },
   {
-    id: "creatine",
-    name: "Creatine Monohydrate",
-    subtitle: "Pure micronised creatine — muscle, brain, and longevity",
-    description: "5g per serving of pure micronised creatine monohydrate. One of the most studied supplements with consistent evidence for muscle preservation, strength, and — increasingly — cognitive function in older adults.",
-    price: "$25",
-    servings: "500g · ~100 day supply",
+    id: "psyllium",
+    name: "Psyllium Husk (Organic)",
+    subtitle: "Soluble fibre for bowel regularity and microbiome diversity",
+    description:
+      "Pure organic psyllium husk powder — the most studied dietary fibre supplement. Increases stool bulk, slows transit in IBS-D, and acts as a prebiotic for Bifidobacterium. The ACG guidelines recommend it as first-line fibre therapy for IBS.",
+    price: "$22",
+    servings: "300g powder · 60 day supply",
     evidenceGrade: "A",
-    evidenceText: "Grade A: Extensive RCT evidence for muscle and brain",
-    tags: ["Muscle", "Brain", "Anti-sarcopenia"],
+    evidenceText: "Grade A: ACG-endorsed first-line therapy; multiple IBS RCTs",
+    tags: ["IBS", "Fibre", "Prebiotic"],
     featured: false,
+  },
+  {
+    id: "omega3",
+    name: "Ultra-Pure Omega-3 (EPA + DHA)",
+    subtitle: "Anti-inflammatory — relevant for IBD and gut barrier",
+    description:
+      "Third-party tested fish oil, 1g EPA + 0.5g DHA in re-esterified triglyceride form. Omega-3 reduces intestinal inflammation and supports gut barrier integrity — particularly relevant in IBD. Raises omega-3 index above 8% in most patients within 3 months.",
+    price: "$35",
+    servings: "90 capsules · 90 day supply",
+    evidenceGrade: "A",
+    evidenceText: "Grade A: Strong RCT evidence (REDUCE-IT; IBD anti-inflammatory data)",
+    tags: ["IBD", "Anti-inflammatory", "Gut Barrier"],
+    featured: false,
+  },
+  {
+    id: "sacboulardii",
+    name: "Saccharomyces boulardii",
+    subtitle: "Probiotic yeast — IBS, antibiotic protection, traveller's diarrhoea",
+    description:
+      "250mg per capsule of S. boulardii CNCM I-745 — the most studied probiotic yeast. Survives antibiotics (it is a yeast, not a bacterium). Evidence for prevention of antibiotic-associated diarrhoea, IBS-D, and Clostridioides difficile recurrence.",
+    price: "$28",
+    servings: "60 capsules · 30 day supply",
+    evidenceGrade: "A",
+    evidenceText: "Grade A: Multiple RCTs for AAD and C. diff prevention",
+    tags: ["IBS-D", "Antibiotic", "Gut Protection"],
+    featured: true,
   },
   {
     id: "magnesium",
     name: "Magnesium Glycinate",
-    subtitle: "High-absorption form for sleep, metabolism & recovery",
-    description: "200mg elemental magnesium as glycinate — the best-tolerated and most bioavailable form. Taken before bed, supports sleep quality, muscle recovery, and insulin sensitivity. No laxative effect at standard doses.",
+    subtitle: "Constipation relief and gut motility support",
+    description:
+      "200mg elemental magnesium as glycinate. Magnesium draws water into the colon and supports smooth muscle function — useful for IBS-C and chronic constipation. The glycinate form is the best-tolerated and least likely to cause osmotic diarrhoea at standard doses.",
     price: "$28",
     servings: "120 capsules · 60 day supply",
     evidenceGrade: "B",
-    evidenceText: "Grade B: Multiple RCTs for sleep and insulin sensitivity",
-    tags: ["Sleep", "Metabolic", "Recovery"],
+    evidenceText: "Grade B: RCTs for constipation; widely used in GI practice",
+    tags: ["IBS-C", "Constipation", "Gut Motility"],
     featured: false,
   },
   {
-    id: "nmn",
-    name: "NMN 500 (Stabilised)",
-    subtitle: "NAD+ precursor — cellular energy and DNA repair",
-    description: "500mg stabilised NMN per capsule with verified purity. NAD+ declines ~50% from age 20 to 60. NMN supplementation raises NAD+ levels and shows early RCT evidence for muscle endurance and insulin sensitivity in older adults.",
-    price: "$55",
-    servings: "60 capsules · 60 day supply",
-    evidenceGrade: "C",
-    evidenceText: "Grade C: Early human RCTs — promising, awaiting larger trials",
-    tags: ["NAD+", "Mitochondria", "DNA Repair"],
-    featured: true,
-  },
-  {
-    id: "spermidine",
-    name: "Spermidine (Wheat Germ Extract)",
-    subtitle: "Autophagy activator — cellular renewal",
-    description: "3.3mg spermidine from standardised wheat germ extract per serving. Spermidine activates autophagy — the cell's internal recycling system that declines with age. The PRELONG trial showed slowing of cognitive decline at this dose.",
-    price: "$45",
-    servings: "60 capsules · 60 day supply",
-    evidenceGrade: "C",
-    evidenceText: "Grade C: Small RCT (PRELONG); strong observational data",
-    tags: ["Autophagy", "Brain", "Cellular Health"],
-    featured: false,
-  },
-  {
-    id: "berberine",
-    name: "Berberine HCl 500mg",
-    subtitle: "AMPK activator — metabolic health and glucose control",
-    description: "500mg berberine HCl. Activates AMPK — the same pathway as metformin. Multiple RCTs show glucose lowering comparable to standard diabetes medication, plus lipid improvement. Take with meals.",
-    price: "$32",
-    servings: "120 capsules · 40 day supply",
-    evidenceGrade: "B",
-    evidenceText: "Grade B: Multiple RCTs vs. diabetes drugs",
-    tags: ["Metabolic", "Glucose", "Anti-aging"],
-    featured: false,
-  },
-  {
-    id: "vitd3k2",
+    id: "vitd",
     name: "Vitamin D3 5000 IU + K2 MK-7",
-    subtitle: "Immune health, bone density, and cardiovascular protection",
-    description: "5000 IU D3 (cholecalciferol) + 100mcg K2 MK-7 per serving. D3 deficiency affects 70%+ of northern-latitude adults. K2 ensures calcium goes to bone, not arteries. VITAL trial: 2000 IU D3 reduced cancer mortality by 25%.",
+    subtitle: "Critical deficiency in IBD — immune and mucosal support",
+    description:
+      "5000 IU D3 + 100mcg K2 MK-7. Vitamin D deficiency affects >50% of IBD patients and correlates with disease activity. Supplementation supports mucosal healing and immune regulation. K2 ensures calcium goes to bone, not soft tissue.",
     price: "$22",
     servings: "120 softgels · 120 day supply",
     evidenceGrade: "B",
-    evidenceText: "Grade B: VITAL trial + observational data",
-    tags: ["Immune", "Bone", "Cardiovascular"],
+    evidenceText: "Grade B: IBD deficiency data + VITAL trial + mucosal healing evidence",
+    tags: ["IBD", "Immune", "Mucosal Healing"],
     featured: false,
   },
   {
-    id: "taurine",
-    name: "Taurine 1000mg",
-    subtitle: "Emerging longevity amino acid — declines with age",
-    description: "1g taurine per capsule. Taurine declines with age and was shown in a landmark 2023 Science paper to extend healthy lifespan in multiple model organisms. Early human data (3g/day) shows improvement in multiple aging biomarkers.",
-    price: "$20",
-    servings: "180 capsules · 60 day supply",
+    id: "digestiveenzyme",
+    name: "Full-Spectrum Digestive Enzyme Blend",
+    subtitle: "Lipase, amylase, protease + lactase — broad digestive support",
+    description:
+      "Broad-spectrum blend including lipase, amylase, protease, cellulase, and lactase. Supports digestion of fat, carbohydrates, protein, fibre, and lactose. Useful in IBS, post-cholecystectomy, exocrine pancreatic insufficiency, and SIBO recovery.",
+    price: "$32",
+    servings: "90 capsules · 30–90 day supply",
+    evidenceGrade: "B",
+    evidenceText: "Grade B: RCT evidence for specific enzyme deficiencies; clinical use in IBS/EPI",
+    tags: ["IBS", "Digestion", "SIBO Recovery"],
+    featured: false,
+  },
+  {
+    id: "butyrate",
+    name: "Sodium Butyrate (Tributyrin)",
+    subtitle: "Postbiotic — colonocyte fuel and gut barrier repair",
+    description:
+      "500mg tributyrin per capsule (the most bioavailable butyrate form). Butyrate is the primary energy source for colonocytes and a key regulator of gut barrier integrity, inflammation, and microbiome composition. Produced naturally from fibre fermentation — this supplement bridges the gap when fibre intake is low.",
+    price: "$42",
+    servings: "60 capsules · 30–60 day supply",
     evidenceGrade: "C",
-    evidenceText: "Grade C: 2023 Science paper; early human trial data",
-    tags: ["Cellular Health", "Antioxidant", "Emerging"],
+    evidenceText: "Grade C: Promising RCT data for IBD and gut permeability; emerging postbiotic",
+    tags: ["IBD", "Gut Barrier", "Postbiotic"],
     featured: false,
   },
 ];
@@ -222,8 +188,8 @@ export default function ShopPage() {
               Books & Supplements
             </h1>
             <p className="text-white/70 text-lg max-w-2xl">
-              Evidence-based longevity resources — books you can trust and supplements backed by human data.
-              No filler, no marketing spin.
+              Evidence-based gut health resources — books grounded in microbiome science and
+              supplements backed by human clinical data. No filler, no marketing spin.
             </p>
           </div>
         </section>
@@ -254,8 +220,8 @@ export default function ShopPage() {
             <a href="#supplements" className="text-sm font-semibold text-[#1B2A4A] hover:text-[#2D6A4F] flex items-center gap-1.5">
               <Pill size={14} /> Supplements
             </a>
-            <Link href="/longevity/supplements" className="ml-auto text-xs text-[#2D6A4F] hover:underline hidden sm:flex items-center gap-1">
-              Evidence guide <ArrowRight size={11} />
+            <Link href="/tools/fodmap-guide" className="ml-auto text-xs text-[#2D6A4F] hover:underline hidden sm:flex items-center gap-1">
+              Free FODMAP tool <ArrowRight size={11} />
             </Link>
           </div>
         </div>
@@ -333,18 +299,16 @@ export default function ShopPage() {
                 <Pill size={20} className="text-white" />
               </div>
               <div>
-                <h2 className="font-serif text-3xl font-bold text-[#1B2A4A]">Supplements</h2>
+                <h2 className="font-serif text-3xl font-bold text-[#1B2A4A]">Gut Health Supplements</h2>
                 <p className="text-gray-500 text-sm">Only Grade A, B, or C evidence · Third-party tested · No proprietary blends</p>
               </div>
             </div>
             <div className="bg-white border border-gray-100 rounded-xl p-4 mb-8 flex items-start gap-3 shadow-sm">
               <FlaskConical size={16} className="text-[#2D6A4F] mt-0.5 shrink-0" />
               <p className="text-sm text-gray-600">
-                Every supplement we stock has an evidence grade (A–C) based on human trial data.
-                We do not stock supplements graded D (no meaningful human evidence).{" "}
-                <Link href="/longevity/supplements" className="text-[#2D6A4F] font-semibold hover:underline">
-                  Read the full evidence guide →
-                </Link>
+                Every supplement we stock has an evidence grade (A–C) based on human trial data specific to GI health.
+                We do not stock supplements graded D (no meaningful human evidence) or with only
+                non-GI health claims.
               </p>
             </div>
 
@@ -362,11 +326,9 @@ export default function ShopPage() {
                     </div>
                   )}
                   <div className="p-5 flex flex-col flex-1">
-                    {/* Icon */}
                     <div className="w-12 h-12 bg-gradient-to-br from-[#1B2A4A] to-[#2D6A4F] rounded-lg flex items-center justify-center mb-3">
                       <Pill size={22} className="text-[#C9A84C]" />
                     </div>
-                    {/* Tags */}
                     <div className="flex flex-wrap gap-1.5 mb-2">
                       {supp.tags.slice(0, 2).map((tag) => (
                         <span key={tag} className="px-1.5 py-0.5 bg-[#2D6A4F]/10 text-[#2D6A4F] text-xs rounded-full">
@@ -400,7 +362,7 @@ export default function ShopPage() {
         {/* Disclaimer */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
           <div className="bg-amber-50 border border-amber-100 rounded-xl p-5 text-sm text-amber-800">
-            <strong>Supplement Disclaimer:</strong> Dietary supplements are not medicines and are not intended to diagnose, treat, cure, or prevent any disease. Evidence grades reflect published research quality. Individual results vary. Consult a qualified healthcare provider before starting any new supplement, particularly if you are pregnant, nursing, have a medical condition, or take prescription medications.
+            <strong>Supplement Disclaimer:</strong> Dietary supplements are not medicines and are not intended to diagnose, treat, cure, or prevent any disease. Evidence grades reflect published research quality. Individual results vary. Consult your gastroenterologist or dietitian before starting any new supplement, particularly if you have an active GI condition or take prescription medications.
           </div>
         </section>
       </main>

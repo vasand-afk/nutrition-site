@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Calculator, Salad, ClipboardList, ArrowRight } from "lucide-react";
+import { Calculator, Salad, ClipboardList, ArrowRight, Activity, FlaskConical } from "lucide-react";
 
 const tools = [
   {
@@ -12,6 +12,24 @@ const tools = [
     href: "/tools/calorie-calculator",
     status: "Live",
     color: "from-[#1B2A4A] to-[#2D3B5E]",
+  },
+  {
+    icon: <Activity size={28} className="text-[#C9A84C]" />,
+    title: "Gut Health Food Tracker",
+    description:
+      "Log your meals and get AI-powered gut health analysis — fiber, FODMAP flags, microbiome impact scores, and personalised clinical insights powered by Claude AI.",
+    href: "/tools/gut-tracker",
+    status: "Live",
+    color: "from-[#1E4A36] to-[#2D6A4F]",
+  },
+  {
+    icon: <FlaskConical size={28} className="text-[#C9A84C]" />,
+    title: "FODMAP Protocol Companion",
+    description:
+      "Navigate the three-phase FODMAP protocol, track your reintroduction results, get a personalised trigger profile, and log your GI lab markers — calprotectin, SIBO breath test, microbiome and more.",
+    href: "/tools/fodmap-guide",
+    status: "Live",
+    color: "from-[#3D2A6A] to-[#2A1B4A]",
   },
   {
     icon: <Salad size={28} className="text-[#C9A84C]" />,
